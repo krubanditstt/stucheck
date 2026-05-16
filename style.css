@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #dbeafe 0, transparent 35%),
+    radial-gradient(circle at top right, #fce7f3 0, transparent 35%),
+    linear-gradient(135deg, #f8fbff, #fff5fb);
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0d6efd, #ec4899);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.97);
+  padding: 30px;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+.login-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  margin: 0 auto 14px;
+  background: linear-gradient(135deg, #0d6efd, #ec4899);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+}
+
+/* FORM */
+
+.form-control,
+.form-select,
+.input-group-text {
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+.input-group .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn {
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* HEADER */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #0d6efd, #ec4899);
+  color: white;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* MENU */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.menu-btn {
+  border: none;
+  background: white;
+  padding: 16px 10px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+  font-weight: 700;
+  color: #334155;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+}
+
+.menu-btn i {
+  display: block;
+  font-size: 28px;
+  color: #0d6efd;
+  margin-bottom: 5px;
+}
+
+/* CARD */
+
+.app-card {
+  border: none;
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(15,23,42,0.10);
+  background: rgba(255,255,255,0.97);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-title h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.badge-soft {
+  background: #eff6ff;
+  color: #0d6efd;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* STUDENT ITEM */
+
+.student-item {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 20px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 18px rgba(15,23,42,0.05);
+}
+
+.status-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.status-btn {
+  padding: 10px 4px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+/* REPORT */
+
+#reportPrintArea {
+  background: white;
+  color: #111827;
+}
+
+#reportPrintArea table {
+  font-size: 14px;
+}
+
+/* LOADING */
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-card {
+  background: white;
+  padding: 28px 34px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .status-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app-card {
+    padding: 16px;
+  }
+
+  .menu-btn {
+    padding: 14px 8px;
+  }
+}
